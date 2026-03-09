@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>田雅洁 | PORTFOLIO 2024-2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Inter', "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* 隐藏滚动条但保留功能 */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #eee;
+            aspect-ratio: 16/9;
+            background: #f9f9f9;
+            cursor: pointer;
+        }
+
+        /* 弹窗样式 */
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.98);
+            z-index: 1000;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .close-btn {
+            position: fixed;
+            top: 20px; right: 20px;
+            width: 40px; height: 40px;
+            background: #000; color: #fff;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 1001; cursor: pointer;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 2rem;
+            border-left: 2px solid #000;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. 封面页 -->
+    <section class="h-screen flex flex-col justify-center px-8 sm:px-20 border-b border-gray-100">
+        <h1 class="text-6xl sm:text-8xl font-bold mb-4 tracking-tighter animate__animated animate__fadeInUp">PORTFOLIO</h1>
+        <div class="animate__animated animate__fadeInUp animate__delay-1s">
+            <p class="text-xl sm:text-2xl font-light">田雅洁 | 产品设计师 / UI/UX 设计师</p>
+            <p class="text-gray-400 mt-2">2024 – 2025</p>
+        </div>
+        <div class="mt-20 animate__animated animate__bounce animate__infinite animate__slow text-sm text-gray-400">
+            SCROLL TO EXPLORE ↓
+        </div>
+    </section>
+
+    <!-- 2. 个人信息 -->
+    <section class="py-20 px-8 sm:px-20 reveal">
+        <h2 class="section-title">01 PROFILE / 个人信息</h2>
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+            <div class="w-full md:w-1/3">
+                <!-- 替换为你的照片地址 -->
+                <img http://p.q2f.cn/2nuLyS="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1000" alt="生活照" class="w-full grayscale hover:grayscale-0 transition-all duration-500 rounded-sm">
+            </div>
+            <div class="w-full md:w-2/3 space-y-8">
+                <div class="grid grid-cols-2 gap-4 border-b pb-8">
+                    <div><p class="text-xs text-gray-400">NAME</p><p class="text-lg">田雅洁</p></div>
+                    <div><p class="text-xs text-gray-400">AGE</p><p class="text-lg">22岁</p></div>
+                    <div><p class="text-xs text-gray-400">LOCATION</p><p class="text-lg">河南·郑州</p></div>
+                    <div><p class="text-xs text-gray-400">EDUCATION</p><p class="text-lg leading-tight">重庆邮电大学<br>产品设计 (23级-至今)</p></div>
+                </div>
+                
+                <div class="space-y-4">
+                    <p class="text-xs text-gray-400">PRACTICE / 实践经历</p>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold">晟孚工作室 (2023-2024)</p>
+                            <p class="text-sm text-gray-600">参与产品设计项目，协助完成草图绘制、视觉效果图制作与方案优化。</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">青年志愿者协会 (2024-2025)</p>
+                            <p class="text-sm text-gray-600">担任部长，统筹策划志愿服务活动，负责人员协调与宣传设计。</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">HUB 工作室 (2024-至今)</p>
+                            <p class="text-sm text-gray-600">参与设计项目研发，负责需求分析、创意构思与成果展示。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <p class="text-xs text-gray-400">SKILLS / 核心技能</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 border border-black text-xs">Figma</span>
+                        <span class="px-3 py-1 border border-black text-xs">Photoshop</span>
+                        <span class="px-3 py-1 border border-black text-xs">Illustrator</span>
+                        <span class="px-3 py-1 border border-black text-xs">After Effects</span>
+                        <span class="px-3 py-1 border border-black text-xs">Axure</span>
+                        <span class="px-3 py-1 border border-black text-xs">交互原型</span>
+                        <span class="px-3 py-1 border border-black text-xs">组件化设计</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 作品目录 & 展示 -->
+    <section class="py-20 bg-black text-white px-8 sm:px-20 reveal">
+        <h2 class="section-title text-gray-500 border-gray-500">02 PROJECTS / 作品展示</h2>
+        
+        <div class="space-y-12">
+            <!-- UI 设计组 -->
+            <div>
+                <p class="text-3xl mb-8 font-light italic">UI Design</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="project-card group" onclick="openModal('https://via.placeholder.com/800x3000?text=糖老丫+UI项目长图')">
+                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-black">
+                            <span>糖老丫 UI 设计</span>
+                        </div>
+                    </div>
+                    <div class="project-card group" onclick="openModal('https://via.placeholder.com/800x3000?text=Linear+Style+UI项目长图')">
+                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-black">
+                            <span>Linear 风格 UI 设计</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品设计 -->
+            <div>
+                <p class="text-3xl mb-8 font-light italic">Product Design</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="project-card" onclick="openModal('https://via.placeholder.com/800x3000?text=智能头盔设计长图')">
+                        <div class="absolute inset-0 bg-gray-300 flex items-center justify-center text-black">
+                            <span>智能头盔设计</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 品牌 & 版式 -->
+            <div>
+                <p class="text-3xl mb-8 font-light italic">Brand & Visual</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="project-card" onclick="openModal('https://via.placeholder.com/800x3000?text=重庆农产品品牌长图')">
+                        <div class="absolute inset-0 bg-gray-400 flex items-center justify-center text-black">
+                            <span>重庆农产品品牌设计</span>
+                        </div>
+                    </div>
+                    <div class="project-card" onclick="openModal('https://via.placeholder.com/800x3000?text=丝绸之路可视化长图')">
+                        <div class="absolute inset-0 bg-gray-500 flex items-center justify-center text-black">
+                            <span>丝绸之路信息可视化</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 获奖荣誉 -->
+    <section class="py-20 px-8 sm:px-20 reveal">
+        <h2 class="section-title">03 AWARDS / 获奖荣誉</h2>
+        <ul class="space-y-6">
+            <li class="flex justify-between items-end border-b pb-4">
+                <span class="text-lg">未来设计师 NCDA 全国高校艺术设计大赛 (重庆赛区)</span>
+                <span class="text-sm font-bold">二等奖</span>
+            </li>
+            <li class="flex justify-between items-end border-b pb-4">
+                <span class="text-lg">中国好创意暨全国数字艺术设计大赛</span>
+                <span class="text-sm font-bold">国赛二等奖</span>
+            </li>
+            <li class="flex justify-between items-end border-b pb-4">
+                <span class="text-lg">蓝桥杯暨中数杯 AIGC 图片创意设计</span>
+                <span class="text-sm font-bold">全国二等奖</span>
+            </li>
+            <li class="flex justify-between items-end border-b pb-4">
+                <span class="text-lg">重庆市大学生工业设计大赛</span>
+                <span class="text-sm font-bold">二等奖、三等奖</span>
+            </li>
+            <li class="flex justify-between items-end border-b pb-4">
+                <span class="text-lg">「江南之星」创新创业大赛</span>
+                <span class="text-sm font-bold">银奖</span>
+            </li>
+            <li class="flex justify-between items-end border-b pb-4">
+                <span class="text-lg">重庆邮电大学学业奖学金</span>
+                <span class="text-sm font-bold">二等奖/三等奖</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 5. 联系方式 -->
+    <footer class="py-20 px-8 sm:px-20 bg-gray-50 reveal">
+        <h2 class="section-title">04 CONTACT / 联系方式</h2>
+        <div class="space-y-4 text-2xl sm:text-4xl font-light tracking-tight">
+            <p>Tel: 15032072098</p>
+            <p>WeChat: tyj90473</p>
+            <p>Email: 1945510458@qq.com</p>
+        </div>
+        <p class="mt-20 text-xs text-gray-400">© 2024 TIAN YAJIE. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <!-- 全屏查看长图的弹窗 -->
+    <div id="modal">
+        <div class="close-btn" onclick="closeModal()">✕</div>
+        <img id="modal-img" src="" class="w-full h-auto block" alt="作品详情">
+    </div>
+
+    <script>
+        // 滚动进入动效
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 弹窗逻辑
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+
+        function openModal(imgUrl) {
+            modalImg.src = imgUrl;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 禁止背景滚动
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            modalImg.src = '';
+            document.body.style.overflow = 'auto'; // 恢复背景滚动
+        }
+
+        // 点击背景关闭
+        modal.onclick = function(e) {
+            if(e.target === modal) closeModal();
+        }
+    </script>
+</body>
+</html>
