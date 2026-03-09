@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Product Designer</title>
+    <!-- 引入 Tailwind CSS 和 动画库 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; scroll-behavior: smooth; }
+        .gray-border { border-color: #e5e7eb; }
+        .project-card:hover .project-overlay { opacity: 1; }
+    </style>
+</head>
+<body class="selection:bg-black selection:text-white">
+
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b gray-border px-6 py-4 flex justify-between items-center">
+        <div class="text-sm font-semibold tracking-tighter">DESIGNER.</div>
+        <div class="space-x-8 text-xs font-medium uppercase tracking-widest">
+            <a href="#work" class="hover:text-gray-400 transition">Works</a>
+            <a href="#about" class="hover:text-gray-400 transition">About</a>
+            <a href="#contact" class="hover:text-gray-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center px-6 md:px-24">
+        <h1 class="text-5xl md:text-8xl font-bold tracking-tighter leading-none mb-6" data-aos="fade-up">
+            PRODUCT<br>DESIGNER.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-500 max-w-xl leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            专注于通过**逻辑性**与**极简视觉**解决复杂的产品问题。目前致力于 AI 原生应用的用户体验探索。
+        </p>
+        <div class="mt-12" data-aos="fade-up" data-aos-delay="400">
+            <a href="#work" class="border-b-2 border-black pb-1 text-sm font-bold hover:text-gray-400 hover:border-gray-400 transition">VIEW SELECTED WORKS ↓</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="px-6 md:px-24 py-24 bg-[#f9f9f9]">
+        <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-400 mb-12">Selected Portfolio</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- 作品卡片 1 -->
+            <div class="group cursor-pointer" data-aos="fade-up">
+                <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative mb-4">
+                    <!-- 这里替换成你的作品截图地址 -->
+                    <div class="w-full h-full bg-[#1a1a1a] flex items-center justify-center text-white text-xs tracking-widest opacity-80 group-hover:scale-105 transition duration-500">PROJECT PREVIEW</div>
+                </div>
+                <h3 class="text-xl font-semibold italic">01. 智能金融终端系统</h3>
+                <p class="text-sm text-gray-400 mt-2 font-light tracking-wide">UX Architecture / Data Visualization</p>
+            </div>
+
+            <!-- 作品卡片 2 -->
+            <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative mb-4">
+                    <div class="w-full h-full bg-[#cccccc] flex items-center justify-center text-black text-xs tracking-widest opacity-80 group-hover:scale-105 transition duration-500">MOBILE APP DESIGN</div>
+                </div>
+                <h3 class="text-xl font-semibold italic">02. 极简主义生活电商</h3>
+                <p class="text-sm text-gray-400 mt-2 font-light tracking-wide">Visual Design / E-commerce</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="about" class="px-6 md:px-24 py-24 border-t gray-border">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="md:w-1/3 mb-12 md:mb-0">
+                <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-400">Experience</h2>
+            </div>
+            <div class="md:w-2/3 space-y-12">
+                <div class="border-b gray-border pb-8" data-aos="fade-left">
+                    <span class="text-xs text-gray-400">2022 - PRESENT</span>
+                    <h4 class="text-2xl font-semibold mt-2">Senior Product Designer @ ByteDance</h4>
+                    <p class="text-gray-500 mt-4 leading-relaxed font-light">负责抖音电商核心链路的设计与迭代，通过 A/B Test 提升交易转化率 12%。</p>
+                </div>
+                <div class="border-b gray-border pb-8" data-aos="fade-left" data-aos-delay="100">
+                    <span class="text-xs text-gray-400">2020 - 2022</span>
+                    <h4 class="text-2xl font-semibold mt-2">UX Designer @ Tencent</h4>
+                    <p class="text-gray-500 mt-4 leading-relaxed font-light">参与腾讯云 B 端控制台规范定义，构建原子级设计系统（Design System）。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="px-6 md:px-24 py-24 bg-black text-white text-center">
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tighter mb-8 italic">Let's build something logical.</h2>
+        <div class="flex flex-wrap justify-center gap-8 text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
+            <a href="mailto:yourname@email.com" class="hover:text-white transition">Email</a>
+            <a href="#" class="hover:text-white transition">WeChat</a>
+            <a href="#" class="hover:text-white transition">LinkedIn</a>
+            <a href="#" class="hover:text-white transition">Dribbble</a>
+        </div>
+        <p class="mt-24 text-[10px] text-gray-600 uppercase tracking-widest">© 2024 YourName. All rights reserved.</p>
+    </footer>
+
+    <!-- 脚本控制动画 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out'
+        });
+    </script>
+</body>
+</html>
